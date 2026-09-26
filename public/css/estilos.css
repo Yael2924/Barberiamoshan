@@ -1,0 +1,258 @@
+/* Estilos del Menu */
+nav {
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+nav, .offcanvas {
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.userx{
+    text-transform: uppercase;
+    color: #ffffff;
+    right: 100%;
+    font-size: 85%;
+}
+
+.lg-bar{
+    width: 200px ;
+    height: 50px ;
+    border-radius: 5px;
+    filter: brightness(0) invert(1);
+}
+
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media(max-width:768px) {
+    .navbar-nav > li:hover {
+        background-color: #4A4A4A;
+    }
+}
+
+.navbar-nav > li:hover {
+    /* background-color: #6dcadd; */
+    background-color: #4A4A4A;
+    color: black;
+}
+
+/* Cambiar el color de fondo y texto al pasar el mouse */
+.dropdown-item:hover {
+    background-color: #4A4A4A !important; /* Borgoña (o el color que prefieras) */
+    color: white !important; /* Texto en blanco */
+}
+
+
+.pst {
+    color: aliceblue;
+}
+
+/* Estilos del footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #1e293b;
+    margin-top: auto; /* Asegura que el footer siempre esté al fondo */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #4A4A4A; /* Color al pasar el mouse */
+}
+
+footer p {
+    color: white; /* Aseguramos que el texto sea blanco */
+}
+
+/* Estilos de las tablas */
+.texto-tabla {
+    text-align: center;
+}
+
+
+
+/* #################################################################################################*/
+/* ###################               ESTILOS DEL carrusel                   ########################*/
+/* #################################################################################################*/
+
+.full-screen-section {
+    width: 100vw; /* Ancho completo de la pantalla */
+    height: 60vh; /* Alto completo de la pantalla */
+    background-color: white; /* Fondo blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100vw;
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    width: max-content;
+    display: flex;
+    gap: 20px; /* Espacio entre imágenes */
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-track img {
+    width: 200px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.carousel-inner img {
+    width: 100%;      /* Mantiene el ancho del contenedor */
+    height: 600px;    /* Ajusta la altura a tu preferencia */
+}
+
+
+
+/* #################################################################################################*/
+/* ###################               ESTILOS DEL TOTAL                      ########################*/
+/* #################################################################################################*/
+/* Contenedor del total general */
+.total-general-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mueve más a la izquierda */
+    margin-top: 20px; /* Separación superior */
+}
+
+/* Etiqueta del total */
+.total-label {
+    font-size: 1.5rem; /* Más grande y visible */
+    margin-right: 15px; /* Espaciado entre la etiqueta y el input */
+}
+
+/* Input del total */
+.total-input {
+    font-size: 2rem; /* Número más grande */
+    height: 60px; /* Altura grande */
+    width: 50%; /* Ancho responsivo */
+    max-width: 400px; /* Máximo ancho */
+    border: 2px solid #000; /* Borde destacado */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .total-general-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: stretch;
+    }
+
+    .total-label {
+        text-align: left;
+        margin-bottom: 10px; /* Espaciado entre etiqueta e input */
+    }
+
+    .total-input {
+        width: 100%; /* Toma todo el ancho en móviles */
+    }
+}
+
+
+/* ########################################################################################################*/
+/* ###################               ESTILOS DE LA PAGINACION                      ########################*/
+/* ########################################################################################################*/
+
+/* Estilo personalizado para la paginación */
+.paginacion-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.paginacion-container .page-item {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.paginacion-container .page-link {
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.paginacion-container .page-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.paginacion-container .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+}
+
+.paginacion-container .page-item.disabled .page-link {
+    background-color: #f8f9fa;
+    color: #ccc;
+    pointer-events: none;
+}
+
+.paginacion-container .page-link:focus {
+    outline: none;
+}
+
+
+#producto_nombre {
+    width: 100%; /* Asegura que el input ocupa todo el ancho disponible */
+}
+
+#sugerencias_nombre {
+    width: 100%; /* La lista tendrá el mismo ancho que el input */
+    max-width: none; /* Evita restricciones de tamaño */
+    position: absolute; /* Para que se superponga correctamente */
+    left: 0; /* Alinea con el input */
+}
+
+.col-12 {
+    position: relative; /* Para que los elementos dentro respeten sus posiciones */
+}
+
+
+
+
+

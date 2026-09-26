@@ -1,0 +1,485 @@
+.btn-custom {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #E6E0D0; /* Color beige similar */
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes completamente redondeados */
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: #d6c7b8; /* Un tono más oscuro al pasar el mouse */
+    border-color: black; /* Borde negro sutil */
+}
+
+
+/* Usando la fuente Poppins para los títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.titulo-blanco {
+    font-family: 'PT Serif';
+    font-weight: 600;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase; /* Para que todo esté en mayúsculas */
+    letter-spacing: 2px; /* Añade un pequeño espaciado entre letras */
+}
+
+.titulo-negro {
+    font-family: 'PT Serif';
+    font-weight: 600;
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase; /* Para que todo esté en mayúsculas */
+    letter-spacing: 2px; /* Añade un pequeño espaciado entre letras */
+}
+
+.contenido-blanco {
+    font-family: 'PT Serif';
+    font-weight: 400;
+    color: white;
+    font-size: 18px;
+}
+
+.contenido-negro {
+    font-family: 'PT Serif';
+    font-weight: 400;
+    color: black;
+    font-size: 18px;
+}
+
+/* Usando la fuente Roboto para los textos */
+body, p, span, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.bienvenida {
+    font-family: 'PT Serif';
+    font-size: 3.7rem;
+    font-weight: 700; /* Hace que el texto sea más grueso */
+    text-transform: uppercase; /* Para que todo esté en mayúsculas */
+    letter-spacing: 2px; /* Añade un pequeño espaciado entre letras */
+    color: white;
+}
+
+
+.descripcion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+h5.fw-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Si quieres agregar más estilos para los botones */
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    overflow-x: hidden; /* Previene scroll horizontal */
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1)); /* Color oscuro, elegante */
+    color: black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 20px; /* Agrega espacio para evitar que quede pegado en pantallas pequeñas */
+}
+
+.card {
+    width: 90%; /* Se ajusta en pantallas pequeñas */
+    max-width: 800px; /* Tamaño máximo en pantallas grandes */
+    height: auto; /* Permite ajuste dinámico */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Asegura que el contenido esté centrado */
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 95%; /* Asegura que ocupe más espacio en pantallas pequeñas */
+        padding: 20px; /* Reduce el padding para mejorar la visualización */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        padding: 15px; /* Reduce aún más el padding */
+    }
+}
+
+
+
+/* Restablecer márgenes y rellenos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colores de fondo alternados */
+.section-bg-light {
+    background-color: #f5f5f5; /* Gris claro */
+    padding: 50px 0; /* Espaciado adecuado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.section-bg-dark {
+    background-color: #222323; /* Gris oscuro */
+    padding: 50px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Separación de las secciones */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.logo-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 750px; /* Ajusta el tamaño del logotipo */
+    height: auto;
+    max-width: 100%; /* Asegura que el logo se ajuste en pantallas pequeñas */
+}
+
+/* Estilos para los textos */
+/* .bienvenida {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+} */
+
+.descripcion {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Botón CTA */
+.cta-button {
+    background-color: #f39c12; /* Color cálido, estilo vintage */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e67e22; /* Cambio de color al pasar el cursor */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+    .logo {
+        width: 70%; /* Reduce el tamaño del logo en pantallas medianas */
+    }
+
+    .bienvenida, .titulo-blanco, .titulo-negro{
+        font-size: 3em; /* Reduce el tamaño de la fuente de bienvenida */
+    }
+
+    .descripcion {
+        font-size: 1.1em;
+        max-width: 80%; /* Hace que la descripción ocupe un 80% del contenedor */
+    }
+
+    .cta-button {
+        font-size: 1.1em; /* Reduce ligeramente el tamaño del botón */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 90%; /* Logo más pequeño en pantallas más pequeñas */
+    }
+
+    .bienvenida, .titulo-blanco, .titulo-negro {
+        font-size: 2.5em; /* Texto más pequeño para pantallas pequeñas */
+    }
+
+    .descripcion {
+        font-size: 1em;
+        max-width: 90%; /* La descripción puede ocupar más espacio */
+    }
+
+    .cta-button {
+        font-size: 1em; /* Asegura que el botón sea más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80%; /* Logo aún más pequeño en dispositivos muy pequeños */
+    }
+
+    .bienvenida, .titulo-blanco, .titulo-negro {
+        font-size: 2em; /* Ajuste para pantallas muy pequeñas */
+    }
+
+    .descripcion {
+        font-size: 0.9em; /* Reducción en el tamaño de la descripción */
+        max-width: 95%; /* La descripción ocupa casi todo el ancho */
+    }
+
+    .cta-button {
+        font-size: 0.9em; /* Botón más pequeño */
+    }
+}
+
+
+/*#######################################################################################################*/
+/*##########################               PARA LO DEL CLIMA                  ###########################*/
+/*#######################################################################################################*/
+
+
+/* Estilo de Datos Clima */
+.weather-container {
+    position: absolute; /* Cambiado de fixed a absolute para moverse dinámicamente */
+    top: 12%;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    text-align: center;
+    z-index: 99;
+    transition: all 0.3s ease-in-out;
+}
+
+.weather-icon {
+    font-size: 48px;
+}
+
+.weather-info {
+    margin-top: 3px;
+}
+
+.weather-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+/* Para cuando la pantalla es pequeña (responsive) */
+@media (max-width: 768px) {
+    .weather-container {
+        position: relative; /* Se vuelve parte del flujo normal en pantallas pequeñas */
+        top: auto;
+        right: auto;
+        margin: 10px auto;
+    }
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para cada tarjeta de la galería */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Imagen dentro de la tarjeta */
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Efecto hover en la tarjeta */
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+/* Título y descripción */
+.prose p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.app-movil-img {
+    max-width: 250px; /* Ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto; /* Centrar la imagen */
+}
+
+@media (max-width: 768px) {
+    .app-movil-img {
+        max-width: 180px; /* Imagen más pequeña en dispositivos móviles */
+    }
+}
+
+
+/*#######################################################################################################*/
+/*##########################                 TRANSACCIONES                    ###########################*/
+/*#######################################################################################################*/
+
+/* Fondo alternado entre gris claro y el fondo original */
+.fondo-claro {
+    background-color: #f0f0f0; /* Gris claro */
+    min-height: 100vh;
+}
+
+.fondo-oscuro {
+    background-color: #ffffff; /* Fondo original */
+    min-height: 100vh;
+}
+
+/* Otras personalizaciones previas para las secciones */
+.hero, .logo-card, #medio, #quienes-somos, #ubicacion, #agenda-cita {
+    padding: 20px;
+}
+
+/* Animación para la transición entre las secciones */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Agregar una animación de deslizamiento lateral */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Galería de imágenes, se puede añadir un efecto de aparición */
+.gallery-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+.gallery-card {
+    width: 250px; /* O ajusta según lo necesites */
+    height: 250px; /* Hace que todas las imágenes tengan un tamaño uniforme */
+    overflow: hidden; /* Evita desbordamiento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222; /* Fondo oscuro para imágenes pequeñas */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+.gallery-card img {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: 100%; /* Ajusta al alto del contenedor */
+    object-fit: cover; /* Recorta la imagen manteniendo proporciones */
+}
+
+
+
+
+
+
+
+
+
