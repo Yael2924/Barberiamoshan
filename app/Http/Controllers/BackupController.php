@@ -12,6 +12,11 @@ class BackupController extends Controller
 {
     public function create()
     {
+        // FIX de Seguridad: Garantizar que el respaldo solo inicie si el rol está verificado.
+        if (auth()->user()->rol !== 'Administrador') {
+            abort(403, 'Acceso denegado: Solo los administradores pueden generar respaldos.');
+        }
+        
         if (auth()->check() && auth()->user()->rol === 'Administrador') {
             try {
                 // Nombre del archivo de backup
