@@ -4,6 +4,11 @@
 <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
 <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
+<!-- Nueva característica: Banner de anuncio rápido -->
+    <div id="promo-banner" style="background-color: #1f2937; color: white; text-align: center; padding: 8px; font-size: 14px; font-weight: bold;">
+        ¡Nuevos horarios disponibles! Agenda tu cita con nuestros barberos hoy.
+    </div>
+
 @guest
 
 <!-- Sección de Bienvenida con Fade-in -->
