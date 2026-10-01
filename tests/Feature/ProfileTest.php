@@ -96,4 +96,16 @@ class ProfileTest extends TestCase
 
         $this->assertNotNull($user->fresh());
     }
+
+    /**
+     * Prueba QA: Verificar que el perfil esté protegido.
+     */
+    public function test_el_perfil_requiere_autenticacion_para_acceder(): void
+    {
+        // Un usuario no logueado intenta entrar al perfil
+        $response = $this->get('/profile');
+
+        // El sistema debe rechazarlo y mandarlo al login
+        $response->assertRedirect('/login');
+    }
 }
