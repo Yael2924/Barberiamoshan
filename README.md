@@ -172,6 +172,8 @@ cp .env.example .env
 Después, abrir el archivo `.env` y configurar los datos de la aplicación.
 
 ## 5. Configurar la base de datos
+> **Nota de Infraestructura:** La configuración predeterminada en el archivo `.env.example` utiliza SQLite para pruebas locales, pero el sistema es totalmente compatible con MySQL/MariaDB para el entorno de producción.
+
 Crear una base de datos en MariaDB/MySQL.
 Por ejemplo:
 ```text
