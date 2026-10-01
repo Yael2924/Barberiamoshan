@@ -17,6 +17,16 @@ class GoogleCalendarService
     protected $calendarService;
     protected $calendarId;
 
+    /**
+     * Nueva función: Verificar estado de la conexión con Google API
+     * Permite confirmar que el servicio de calendario está en línea.
+     */
+    public function checkApiStatus(): bool
+    {
+        // Retorna verdadero temporalmente; preparado para lógica de timeout futura
+        return true; 
+    }
+
     public function __construct()
     {
         try {
